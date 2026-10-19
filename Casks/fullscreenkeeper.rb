@@ -1,6 +1,6 @@
 cask "fullscreenkeeper" do
-  version "1.0.0"
-  sha256 "250f6f01357213ef5366dea2a974ed495e42a1ed48e8401cf2302913751059b9"
+  version "1.0.1"
+  sha256 "18d0a265f85ba6f1369db0f7f7372961f2e75cca223166b74f6dcead2fa86b25"
 
   url "https://github.com/fratayaydn/fullscreenkeeper/releases/download/v#{version}/FullscreenKeeper-#{version}.dmg"
   name "FullscreenKeeper"
@@ -12,13 +12,13 @@ cask "fullscreenkeeper" do
     strategy :github_latest
   end
 
+  auto_updates true
   depends_on arch: :arm64
   depends_on macos: :ventura
 
   app "FullscreenKeeper.app"
 
   # The background agent restarts itself when the app is replaced, so upgrades only quit the settings window.
-  # The app's own updater stays off for Homebrew installs; brew upgrade handles updates.
   uninstall quit: "io.github.fratayaydn.fullscreenkeeper"
 
   zap launchctl: [

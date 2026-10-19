@@ -1,6 +1,6 @@
 cask "nightkeys" do
-  version "1.0.0"
-  sha256 "b561fc11f13c697d2f939a46cb9656364f44fa68a8fc6902b905595daccc6821"
+  version "1.0.1"
+  sha256 "fa0efa1b3f83be49a1887f8aec3c8b339c1429d7fd89d42ab6986c1ed7866049"
 
   url "https://github.com/fratayaydn/nightkeys/releases/download/v#{version}/NightKeys-#{version}.dmg"
   name "NightKeys"
@@ -12,6 +12,7 @@ cask "nightkeys" do
     strategy :github_latest
   end
 
+  auto_updates true
   depends_on arch: :arm64
   depends_on macos: :ventura
 
@@ -20,6 +21,9 @@ cask "nightkeys" do
   # The background agent restarts itself when the app is replaced, so upgrades only quit the settings window.
   uninstall quit: "io.github.fratayaydn.nightkeys"
 
-  zap launchctl: "io.github.fratayaydn.nightkeys.agent",
+  zap launchctl: [
+        "io.github.fratayaydn.nightkeys.agent",
+        "io.github.fratayaydn.nightkeys.updater",
+      ],
       trash:     "~/Library/Preferences/io.github.fratayaydn.nightkeys.plist"
 end
