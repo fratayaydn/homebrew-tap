@@ -1,6 +1,6 @@
 cask "fullscreenkeeper" do
-  version "1.0.2"
-  sha256 "aad5cd00157f5f8ca96b3afdb82ec999acaf43d05264ef8e65c01a601b770343"
+  version "1.0.3"
+  sha256 "fcd71c5194580f224f088f0ad82ebe90604c9f3b3e5c6ff83e0d446ccae9d580"
 
   url "https://github.com/fratayaydn/fullscreenkeeper/releases/download/v#{version}/FullscreenKeeper-#{version}.dmg"
   name "FullscreenKeeper"
