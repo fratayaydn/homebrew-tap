@@ -1,6 +1,6 @@
 cask "mickeeper" do
-  version "1.0.1"
-  sha256 "ebbfba124f25ad34aa9ab39bcebae2894be0b58ea1c5de4629cdc5a1b19f0c17"
+  version "1.0.2"
+  sha256 "333a19b5efd79055fd877da3e9b808c0a0d68ac09bec2b662a855310fbb8972c"
 
   url "https://github.com/fratayaydn/mickeeper/releases/download/v#{version}/MicKeeper-#{version}.dmg"
   name "MicKeeper"
