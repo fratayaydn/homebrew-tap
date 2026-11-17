@@ -1,6 +1,6 @@
 cask "balancekeeper" do
-  version "1.0.0"
-  sha256 "4576f8cf74b78e225042b3babf92948be631a3ff70d9ea177572737bab9daf28"
+  version "1.0.1"
+  sha256 "cb4adbd8134d4247de67fcd34797c5818311cf1aa81aff23490b5ecd3f3d601b"
 
   url "https://github.com/fratayaydn/balancekeeper/releases/download/v#{version}/BalanceKeeper-#{version}.dmg"
   name "BalanceKeeper"

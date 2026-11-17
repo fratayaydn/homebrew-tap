@@ -1,6 +1,6 @@
 cask "capsnow" do
-  version "1.0.0"
-  sha256 "b1af216753fd3a062c895e18c6c00be4c84e973e15ce7fc28308760ab92ec9d9"
+  version "1.0.1"
+  sha256 "7a8f20d075105839beb26bbd1fd40e39b88c5eb54dc3015dda8476f78c8204e3"
 
   url "https://github.com/fratayaydn/capsnow/releases/download/v#{version}/CapsNow-#{version}.dmg"
   name "CapsNow"
