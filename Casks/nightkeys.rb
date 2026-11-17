@@ -1,6 +1,6 @@
 cask "nightkeys" do
-  version "1.0.3"
-  sha256 "e4d1c73b6377ba656e871c91e91392bce6c2d9862eea940fc4b01c6b275e9a50"
+  version "1.0.4"
+  sha256 "e1fdd2c3bb6293d67c053c390bffa6180f2206546ef028b5275362d5ce145884"
 
   url "https://github.com/fratayaydn/nightkeys/releases/download/v#{version}/NightKeys-#{version}.dmg"
   name "NightKeys"
