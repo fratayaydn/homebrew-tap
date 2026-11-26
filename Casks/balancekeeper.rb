@@ -1,6 +1,6 @@
 cask "balancekeeper" do
-  version "1.0.2"
-  sha256 "29981e2874f24a27a7ed89d5bd9a90012782726303ccd2c2de891dfa4daf6e7a"
+  version "1.0.3"
+  sha256 "b3aaab2855772114620c285d7ae5a1bea1d784b6fb99aeb8b33f0421e9ade18a"
 
   url "https://github.com/fratayaydn/balancekeeper/releases/download/v#{version}/BalanceKeeper-#{version}.dmg"
   name "BalanceKeeper"
@@ -12,6 +12,7 @@ cask "balancekeeper" do
     strategy :github_latest
   end
 
+  auto_updates true
   depends_on arch: :arm64
   depends_on macos: :ventura
 
@@ -20,6 +21,9 @@ cask "balancekeeper" do
   # The background agent restarts itself when the app is replaced, so upgrades only quit the settings window.
   uninstall quit: "io.github.fratayaydn.balancekeeper"
 
-  zap launchctl: "io.github.fratayaydn.balancekeeper.agent",
+  zap launchctl: [
+        "io.github.fratayaydn.balancekeeper.agent",
+        "io.github.fratayaydn.balancekeeper.updater",
+      ],
       trash:     "~/Library/Preferences/io.github.fratayaydn.balancekeeper.plist"
 end
